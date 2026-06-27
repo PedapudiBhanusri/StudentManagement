@@ -1,29 +1,24 @@
 package main
 
-import "fmt"
-
 func main() {
 
-	var id int
-	var name string
-	var course string
+	AddStudent(Student{
+		ID:     1,
+		Name:   "Bhanu",
+		Course: "Go",
+	})
 
-	fmt.Println("===== Student Management =====")
+	AddStudent(Student{
+		ID:     2,
+		Name:   "Rahul",
+		Course: "Java",
+	})
 
-	fmt.Print("Enter Student ID : ")
-	fmt.Scan(&id)
+	AddStudent(Student{
+		ID:     3,
+		Name:   "Priya",
+		Course: "Python",
+	})
 
-	fmt.Print("Enter Student Name : ")
-	fmt.Scan(&name)
-
-	fmt.Print("Enter Course : ")
-	fmt.Scan(&course)
-
-	student := Student{
-		ID:     id,
-		Name:   name,
-		Course: course,
-	}
-
-	AddStudent(student)
+	SearchStudent(2)
 }
